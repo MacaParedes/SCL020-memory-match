@@ -1,7 +1,7 @@
 import App from './components/App.js';
 
 let namePlayer = "";
-// console.log(window.location);
+console.log(window.location);
 if (window.location.pathname=="/"){
     document.getElementById("text").addEventListener('change',function(){
         namePlayer = document.getElementById("text").value;
