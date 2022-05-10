@@ -2,7 +2,7 @@ import App from './components/App.js';
 
 let namePlayer = "";
 console.log(window.location);
-if (window.location.pathname=="/"){
+if (window.location.pathname=="/SCL020-memory-match/"){
     document.getElementById("text").addEventListener('change',function(){
         namePlayer = document.getElementById("text").value;
         const saveToLocalStorage = () => {
@@ -24,7 +24,7 @@ if (window.location.pathname=="/"){
     });   
 }
 
-if (window.location.pathname!="/"){
+if (window.location.pathname!="/SCL020-memory-match/"){
     let audio = new Audio('audios/main-theme.mp3');
     audio.play();
     audio.volume = 0.6;
