@@ -1,7 +1,7 @@
 import App from './components/App.js';
 
 let namePlayer = "";
-console.log(window.location);
+
 if (window.location.pathname=="/SCL020-memory-match/"){
     document.getElementById("text").addEventListener('change',function(){
         namePlayer = document.getElementById("text").value;
@@ -35,3 +35,5 @@ if (window.location.pathname!="/SCL020-memory-match/"){
     let bigDiv = App.createBoardElements(shuffled);
     document.getElementById('gameContainer').appendChild(bigDiv);
 }
+
+//"/SCL020-memory-match/"
