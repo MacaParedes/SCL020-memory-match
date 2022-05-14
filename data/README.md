@@ -3,14 +3,19 @@
 Proceso de diseño
 Problema - Solución
 
+Pokememorice es un juego creado para niñes entre 7 y 10 años, sin embargo su diseño y tematica lo vuelven apto para los distintos rangos etarios.
+Este juego sigue las reglas de un clásico memorice pero con tematica de Pokemon.
+Memorice permite estimular la atención y la memoria.
+
 ### Historias de usuario
 
 _research_
 Necesidades usuario
 Entretención
-Estimulos (sonidos, imagenes de pokemon, Ash, etc.)
+Estimulos (sonidos, imagenes, mensajes, etc.)
 
 hacer/ver
+Cartas con imagenes de Pokemon
 
 _definition of done_
 Definición de terminado
@@ -39,11 +44,11 @@ Criterios de aceptación
 
 Problemas de usabilidad detectados:
 
-- Inicialmente usuari@ podía dar vuelta 3 cartas al mismo tiempo.
-- Sonido de match se escuchaba a muy bajo volumen.
-- letra poco legible.
-- Carta se daba vuelta muy rápido.
-- Poco conexión con el usuario (puntos, capturas, etc.)
+- Inicialmente usuari@ podía dar vuelta 3 cartas al mismo tiempo. => Restricción mediante
+- Sonido de match se escuchaba a muy bajo volumen. => Se aumenta volumen.
+- Letra poco legible => Se opta por otra typografía.
+- Carta se daba vuelta muy rápido => Se aumenta tiempo del giro.
+- Poco conexión con el usuario => A la página de inicio se le incorpora un cuadro de dialogo con efecto de maquina de escribir junto a la imagen del personaje principal para involucrar al usuario y motivarlo a continuar hasta el final del juego. También mediante una tabla de jugador, incorporando barra de progreso, imagen de pokemon capturado, cantidad de intentos por partida, el usuario podrá jugar más de una vez intentando superarse.
 
 #### Planificación
 

@@ -1,11 +1,11 @@
 import pokemon from '../data/pokemon/pokemon.js';
 import utilities from '../utilities.js';
 
-let matchCount=0;
-let counting=0;
-let cardList = pokemon.items; 
-let turn=0;
-let selectedCardsMiniDiv=[];
+let matchCount=0;  // para el win. llega a la cantidad de cartas/2 max. 
+let counting=0;    // para player. lleva la cuenta de intentos
+let cardList = pokemon.items;  // la data. un array de varios objetos. 
+let turn=0;     // para controlar las cartas dadas vueltas y para hacer la comparación cuando llegue a 2. 
+let selectedCardsMiniDiv=[]; //para tener el par de cartas seleccionadas.
 
 
 const App = { 
@@ -25,6 +25,7 @@ const App = {
       shuffled[i]=shuffled[randomNumber];
       shuffled[randomNumber] = ranNumLoop;
     }
+    console.log(shuffled)
     return shuffled;
   },
   createBoardElements: (shuffled)=>{
@@ -48,7 +49,7 @@ const App = {
     player.className='player';
     divCard.className = "div-card";
     player.textContent = 'Jugador@: '+localStorage.getItem('PlayerName');
-    divCount.textContent='Intentos: '+counting;
+    divCount.textContent='Intentos: '+     counting;
     divProgress.textContent='Progreso: ';
     parCaptures.textContent='Capturas: ';
     player.appendChild(divCount);
@@ -78,14 +79,15 @@ const App = {
       miniDiv.appendChild(cardImageFront); 
       miniDiv.addEventListener('click', App.flipSelectedCard);
     }
+    console.log(bigDiv)
     return bigDiv;
   },
   
   flipSelectedCard: function (){
     if (turn<2){
       turn++; 
+      console.log(this)
       this.style.transform = 'rotateY(180deg)';
-      console.log(selectedCardsMiniDiv);
       selectedCardsMiniDiv.push(this);
       if (turn===2 && selectedCardsMiniDiv[0].id==selectedCardsMiniDiv[1].id){
         selectedCardsMiniDiv.pop();
@@ -131,7 +133,7 @@ const App = {
         },3000);
       } 
     },1)
-    return   
+    return
   },
 
   noMatch:()=>{
