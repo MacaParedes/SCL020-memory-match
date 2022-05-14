@@ -27,7 +27,7 @@ if (window.location.pathname=="/SCL020-memory-match/"){
 if (window.location.pathname!="/SCL020-memory-match/"){
     let audio = new Audio('audios/main-theme.mp3');
     audio.play();
-    audio.volume = 0.6;
+    audio.volume = 0.2;
     audio.loop=true; 
     let cardList = App.createCardList();
     let duplicatedList = App.duplicateList(cardList);
